@@ -953,6 +953,228 @@
       font-size: 16px;
     }
 
+    /* ============================================
+       MOBILE RESPONSIVE STYLES
+       ============================================ */
+
+    @media (max-width: 768px) {
+      /* Header adjustments */
+      .header {
+        flex-wrap: wrap;
+        padding: 8px 12px;
+        gap: 10px;
+      }
+
+      .header-logo {
+        font-size: 18px;
+      }
+
+      .header-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 2px;
+      }
+
+      .header-nav a {
+        padding: 5px 8px;
+        font-size: 11px;
+      }
+
+      .header-right {
+        gap: 10px;
+      }
+
+      .header-right span {
+        display: none;
+      }
+
+      .header-search input {
+        width: 100px;
+      }
+
+      /* Main layout - stack columns */
+      .page-container {
+        grid-template-columns: 1fr;
+        padding: 10px;
+        gap: 10px;
+      }
+
+      /* Left column */
+      .left-col {
+        display: grid;
+        grid-template-columns: 120px 1fr;
+        gap: 10px;
+        align-items: start;
+      }
+
+      .profile-photo {
+        width: 120px;
+        height: 150px;
+      }
+
+      .profile-actions {
+        font-size: 12px;
+        gap: 6px;
+      }
+
+      .profile-actions a {
+        padding: 4px 0;
+      }
+
+      .sidebar-box {
+        grid-column: 1 / -1;
+      }
+
+      /* Middle column */
+      .profile-intro h2 {
+        font-size: 16px;
+      }
+
+      .profile-intro .tagline {
+        font-size: 12px;
+        display: block;
+        margin-left: 0;
+        margin-top: 4px;
+      }
+
+      .profile-tabs {
+        flex-wrap: wrap;
+      }
+
+      .profile-tabs a {
+        padding: 6px 10px;
+        font-size: 11px;
+      }
+
+      .action-bar {
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .action-bar a {
+        font-size: 11px;
+      }
+
+      .status-update-box {
+        flex-direction: column;
+      }
+
+      .status-update-box input {
+        width: 100%;
+      }
+
+      .post-filters {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      /* Wall posts */
+      .wall-post {
+        gap: 8px;
+      }
+
+      .wall-post-avatar {
+        width: 40px;
+        height: 40px;
+      }
+
+      .wall-post-text {
+        font-size: 12px;
+      }
+
+      /* Feed items */
+      .feed-item {
+        gap: 6px;
+      }
+
+      .feed-item-content p {
+        font-size: 11px;
+      }
+
+      /* Right column - moves to bottom */
+      .right-col {
+        order: 3;
+      }
+
+      .currently-list {
+        font-size: 12px;
+      }
+
+      /* Footer */
+      .footer-bar {
+        padding: 4px 10px;
+      }
+
+      .footer-online {
+        font-size: 10px;
+        padding: 3px 6px;
+      }
+
+      .footer-chat {
+        font-size: 10px;
+        padding: 3px 6px;
+      }
+
+      /* Modals */
+      .modal-content {
+        margin: 10px;
+        max-width: calc(100% - 20px);
+      }
+
+      .error-modal {
+        padding: 20px;
+        min-width: auto;
+      }
+
+      .error-modal h3 {
+        font-size: 13px;
+      }
+
+      .error-modal p {
+        font-size: 12px;
+      }
+    }
+
+    /* Extra small screens */
+    @media (max-width: 480px) {
+      .header-nav a {
+        padding: 4px 6px;
+        font-size: 10px;
+      }
+
+      .left-col {
+        grid-template-columns: 100px 1fr;
+      }
+
+      .profile-photo {
+        width: 100px;
+        height: 125px;
+      }
+
+      .profile-actions {
+        font-size: 11px;
+      }
+
+      .profile-tabs a {
+        padding: 5px 8px;
+        font-size: 10px;
+      }
+
+      .action-bar a {
+        font-size: 10px;
+      }
+
+      .action-bar .action-icon {
+        display: none;
+      }
+
+      .wall-post-avatar {
+        width: 32px;
+        height: 32px;
+      }
+    }
+
   </style>
 </head>
 <body>
