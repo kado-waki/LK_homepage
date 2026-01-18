@@ -1,0 +1,258 @@
+================================================================================
+                          LK HOMEPAGE VISION DOCUMENT
+================================================================================
+
+"Something you can feel."
+
+The goal is not to inform—it's to evoke. Before a single word is read, the
+visitor should feel something: warmth, nostalgia, curiosity, delight. This
+website is a digital handshake, not a digital resume.
+
+
+================================================================================
+                              CORE PHILOSOPHY
+================================================================================
+
+FEELING OVER FUNCTION
+---------------------
+The first 3 seconds matter more than everything else combined. The site should
+trigger an emotional response—a flicker of recognition, a smile, a "whoa."
+Content supports the feeling; it doesn't lead.
+
+NOSTALGIA AS A SUPERPOWER
+-------------------------
+The 2009-2010 era of UI design (Facebook's blue gradients, iTunes' Cover Flow,
+early iPhone skeuomorphism) created interfaces that felt tactile and alive.
+These weren't just tools—they were places you wanted to be. We're borrowing
+that magic.
+
+PLAYFUL ≠ UNSERIOUS
+-------------------
+Dynamic, delightful interactions signal creativity and intentionality. They
+show craft. The best designers will recognize this immediately.
+
+
+================================================================================
+                              DESIGN LANGUAGE
+================================================================================
+
+THE OLD-SCHOOL AESTHETIC
+------------------------
+Draw from the visual vocabulary of 2008-2011:
+
+• Skeuomorphism: Elements that look touchable—buttons that look like buttons,
+  surfaces that look like materials (brushed metal, linen, leather grain)
+
+• Glossy "Aqua" effects: Subtle glass-like reflections, gel buttons with
+  highlights and shadows that make them look pressable
+
+• Rich gradients: Not flat colors—depth. Blues that shift from light to dark,
+  toolbars with subtle dimension
+
+• Drop shadows: Soft, realistic shadows that lift elements off the page
+
+• Beveled edges: That 3D "raised" look on buttons and panels
+
+• Rounded corners: Generous, friendly radii (8-12px)
+
+• Textures: Subtle noise, linen patterns, paper grain—surfaces that feel real
+
+• Reflections: Elements that cast reflections below them (think Cover Flow)
+
+COLOR PALETTE
+-------------
+Consider warm, slightly desaturated tones mixed with era-appropriate accents:
+
+• Primary: A rich blue reminiscent of early Facebook (#3b5998) or iTunes
+  sidebar gradients
+• Secondary: Warm grays with slight texture
+• Accents: Glossy greens for actions, warm oranges for highlights
+• Background: Off-white or subtle linen texture—never stark white
+
+TYPOGRAPHY
+----------
+• Headlines: Something with personality—consider rounded sans-serifs or
+  friendly serifs that feel approachable
+• Body: Clean and readable, but with character
+• Consider: Slight text shadows on headers for that embossed look
+
+MOTION & INTERACTION
+--------------------
+• Hover states that feel responsive: buttons that "press in," links that glow
+• Smooth transitions (ease-in-out, ~200-300ms)
+• Subtle parallax or floating elements
+• Consider: A tasteful loading animation that sets the mood before content
+  appears
+• Easter eggs: Hidden interactions that reward the curious
+
+
+================================================================================
+                              CONTENT SECTIONS
+================================================================================
+
+1. THE LANDING / HERO
+---------------------
+Purpose: Immediate emotional impact
+
+• A bold, warm greeting—not "Welcome to my website" but something with voice
+• Consider: An interactive element right away (something that responds to
+  cursor, a playful animation, a "widget" that does something unexpected)
+• Visual anchor: Could be a stylized photo, an illustration, or an abstract
+  element that feels personal
+• Minimal text—let the design speak first
+
+2. THE PROFESSIONAL GLIMPSE
+---------------------------
+Purpose: Quick credibility without duplicating LinkedIn/resume
+
+• Brief "what I do" statement (1-2 sentences max)
+• Prominent, styled buttons/links to:
+  - LinkedIn profile
+  - Resume/CV (PDF or link)
+• Consider: A "currently" section ("Currently: [role] at [company]")
+• Design note: These could be styled as old-school badges or buttons—tactile,
+  clickable, satisfying
+
+3. THE PERSONAL CORNER
+----------------------
+Purpose: Show the human behind the professional
+
+HOBBIES & INTERESTS
+• Not a bulleted list—make it visual and explorable
+• Consider: A "shelf" of interests (like iTunes album view), or interactive
+  cards that flip/expand
+• Categories might include: Creative pursuits, learning, collections,
+  obsessions, side projects
+
+CURRENTLY CONSUMING
+• "Now reading" / "Now listening" / "Now watching"
+• Could be displayed as actual media—book covers, album art, show posters
+• Consider: Pulling this dynamically (Spotify API, Goodreads, Letterboxd)
+  or keeping it manual for curation
+• Design: Stack of records, pile of books, a "media player" widget
+
+4. THE CONTACT PORTAL
+---------------------
+Purpose: One-click connection
+
+• NOT a traditional contact form with 5 fields
+• A single, inviting button: "Say Hello" / "Drop a Note"
+• Opens a minimal overlay or expands inline
+• Just: Name (optional), Message, Send
+• Consider: mailto: link that pre-fills subject line for true one-click
+• Or: A simple embedded form (Formspree, Netlify Forms, etc.)
+• Design: Style it like sending a physical note—paper texture, stamp, etc.
+
+
+================================================================================
+                        ELEMENTS THAT CATCH DESIGNERS' EYES
+================================================================================
+
+Based on what makes personal sites memorable in the design community:
+
+CUSTOM CURSOR
+-------------
+A small thing that signals big intentionality. Could be themed to the overall
+aesthetic (a pointer with personality, something that changes on hover).
+
+SOUND DESIGN (Optional, Tasteful)
+---------------------------------
+A subtle click on button press, a soft whoosh on page transition. Must be
+optional and never intrusive—but when done right, it's unforgettable.
+
+CUSTOM 404 PAGE
+---------------
+A delightful dead-end shows you care about every corner of the experience.
+
+FAVICON & BROWSER TAB
+---------------------
+Animated favicon, clever tab title that changes ("Come back!" when
+unfocused), attention to the small details.
+
+VIEW SOURCE EASTER EGG
+----------------------
+A comment in the HTML for those who peek behind the curtain. Designers check.
+
+SCROLL EXPERIENCE
+-----------------
+Not aggressive parallax, but thoughtful reveal. Elements that fade in with
+purpose, sections that feel like turning pages.
+
+RESPONSIVE PERSONALITY
+----------------------
+The mobile experience should feel just as intentional—not a shrunk desktop,
+but a reimagined experience that keeps the soul.
+
+LOADING STATE
+-------------
+If any loading is required, make it delightful. A playful animation, a witty
+message, something that makes waiting feel like part of the experience.
+
+"MADE BY" FOOTER
+----------------
+A personal sign-off. "Crafted by LK" with a small flourish. Shows pride in
+the work.
+
+
+================================================================================
+                              TECHNICAL NOTES
+================================================================================
+
+RECOMMENDED APPROACH
+--------------------
+• Static site generator (Astro, Next.js, or even vanilla HTML/CSS/JS for
+  ultimate control)
+• CSS: Consider mixing modern CSS with intentionally "retro" techniques
+• Hosting: Vercel, Netlify, or GitHub Pages
+• Keep it fast—nostalgia shouldn't mean slow
+
+ACCESSIBILITY
+-------------
+• Old-school aesthetic doesn't mean old-school accessibility
+• Ensure contrast ratios are met
+• Interactive elements are keyboard-navigable
+• Alt text on images
+• The design can feel retro while being fully modern in function
+
+
+================================================================================
+                              INSPIRATION TOUCHSTONES
+================================================================================
+
+• iTunes 10 (2010): Cover Flow, brushed metal, reflections
+• Facebook 2009: The blue gradient header, rounded photo corners, the "Wall"
+• iPhone OS 3: Glossy icons, linen textures, skeuomorphic apps
+• Letterboxd: Modern example of personality-driven design with film aesthetic
+• Poolside.fm: Retro aesthetic done with full commitment
+• henry.codes, leerob.io, joshwcomeau.com: Modern personal sites with
+  personality that designers admire
+
+
+================================================================================
+                              SUCCESS METRICS
+================================================================================
+
+The site succeeds if:
+
+1. Someone screenshots it to share with a friend
+2. A visitor stays longer than they "need" to
+3. The feeling lingers after the tab is closed
+4. It makes you smile when you visit your own site
+
+
+================================================================================
+                              NEXT STEPS
+================================================================================
+
+1. Mood board: Collect screenshots of 2009-2011 UI, color swatches, textures
+2. Content draft: Write the actual copy in your voice
+3. Wireframes: Rough layout sketches (low-fi first)
+4. Prototype: Build one section to nail the feel before scaling
+5. Iterate: Share with trusted friends/designers for gut-check feedback
+
+
+================================================================================
+
+"A website should feel like a place—one that's unmistakably yours."
+
+================================================================================

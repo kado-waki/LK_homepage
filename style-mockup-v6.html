@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lindsay's Profile</title>
+  <style>
+    /* ============================================
+       LK HOMEPAGE - STYLE MOCKUP V6 (FINAL)
+       Based on 2006-2009 Facebook visual DNA
+       ============================================ */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lucida Grande', 'Tahoma', 'Verdana', sans-serif;
+      font-size: 11px;
+      color: #333;
+      background: #fff;
+      line-height: 1.4;
+      padding-bottom: 40px;
+    }
+
+    a {
+      color: #3b5998;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* ============================================
+       HEADER BAR
+       ============================================ */
+
+    .header {
+      background: #3b5998;
+      border-bottom: 1px solid #133783;
+      padding: 5px 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-logo {
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: -1px;
+    }
+
+    .header-nav {
+      display: flex;
+      gap: 4px;
+    }
+
+    .header-nav a {
+      color: #d8dfea;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-weight: bold;
+      border-radius: 3px;
+    }
+
+    .header-nav a:hover {
+      background: rgba(255,255,255,0.1);
+      text-decoration: none;
+    }
+
+    .header-nav a.active {
+      color: #fff;
+      background: rgba(255,255,255,0.15);
+    }
+
+    .header-right {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .header-right a {
+      color: #d8dfea;
+      font-size: 11px;
+    }
+
+    .header-right a:hover {
+      color: #fff;
+    }
+
+    .header-search input {
+      padding: 4px 8px;
+      font-size: 12px;
+      border: 1px solid #1d4088;
+      border-radius: 3px;
+      width: 140px;
+    }
+
+    .header-search input:focus {
+      outline: none;
+      border-color: #6d84b4;
+    }
+
+    /* ============================================
+       BLUE PROFILE BAR
+       ============================================ */
+
+    .profile-bar {
+      background: linear-gradient(180deg, #6d84b4 0%, #5972a7 100%);
+      border-bottom: 1px solid #3b5998;
+      padding: 10px 20px;
+    }
+
+    /* ============================================
+       MAIN LAYOUT
+       ============================================ */
+
+    .page-container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: grid;
+      grid-template-columns: 180px 1fr 180px;
+      gap: 15px;
+    }
+
+    /* ============================================
+       LEFT COLUMN
+       ============================================ */
+
+    .left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 220px;
+      border: 1px solid #ccc;
+      overflow: hidden;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .profile-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-size: 11px;
+    }
+
+    .profile-actions a {
+      padding: 1px 0;
+    }
+
+    .profile-actions a.poke {
+      font-weight: bold;
+    }
+
+    .sidebar-box {
+      border: 1px solid #d8dfea;
+      background: #fff;
+    }
+
+    .sidebar-box-header {
+      background: #f7f7f7;
+      padding: 5px 8px;
+      border-bottom: 1px solid #d8dfea;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .sidebar-box-header:hover {
+      background: #f0f0f0;
+    }
+
+    .sidebar-box-header h3 {
+      font-size: 11px;
+      font-weight: bold;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .sidebar-box-header h3::before {
+      content: '▼';
+      font-size: 8px;
+      color: #999;
+    }
+
+    .sidebar-box-header .edit-link {
+      font-size: 11px;
+      font-weight: normal;
+    }
+
+    .sidebar-box-content {
+      padding: 8px;
+      font-size: 11px;
+    }
+
+    .status-indicator {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      background: #6BBA70;
+      border-radius: 50%;
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .info-list-item {
+      display: flex;
+      gap: 4px;
+    }
+
+    .info-list-item .label {
+      color: #666;
+    }
+
+    /* ============================================
+       MIDDLE COLUMN
+       ============================================ */
+
+    .main-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .profile-intro {
+      padding-bottom: 8px;
+      border-bottom: 1px solid #d8dfea;
+      margin-bottom: 5px;
+    }
+
+    .profile-intro h2 {
+      font-size: 14px;
+      font-weight: normal;
+      color: #333;
+      display: inline;
+    }
+
+    .profile-intro .tagline {
+      color: #666;
+      font-size: 11px;
+      display: inline;
+      margin-left: 4px;
+    }
+
+    .profile-intro .clear-link {
+      color: #3b5998;
+      font-size: 10px;
+      margin-left: 8px;
+    }
+
+    .profile-tabs {
+      display: flex;
+      border-bottom: 1px solid #d8dfea;
+      margin-bottom: 6px;
+    }
+
+    .profile-tabs a {
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: bold;
+      color: #3b5998;
+      border: 1px solid transparent;
+      border-bottom: none;
+      margin-bottom: -1px;
+      background: transparent;
+    }
+
+    .profile-tabs a:hover {
+      text-decoration: none;
+      background: #f7f7f7;
+    }
+
+    .profile-tabs a.active {
+      background: #fff;
+      border-color: #d8dfea;
+      border-bottom-color: #fff;
+      color: #333;
+    }
+
+    .action-bar {
+      display: flex;
+      gap: 15px;
+      padding: 6px 0;
+      border-bottom: 1px solid #d8dfea;
+      margin-bottom: 6px;
+      font-size: 11px;
+    }
+
+    .action-bar a {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #3b5998;
+    }
+
+    .action-bar a:hover {
+      text-decoration: underline;
+    }
+
+    .action-icon {
+      width: 16px;
+      height: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+    }
+
+    .status-update-box {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .status-update-box input {
+      flex: 1;
+      padding: 6px 10px;
+      border: 1px solid #bdc7d8;
+      border-radius: 3px;
+      font-size: 11px;
+      font-family: inherit;
+      background: #fff;
+    }
+
+    .status-update-box input:focus {
+      outline: none;
+      border-color: #3b5998;
+    }
+
+    .status-update-box button {
+      background: #5972a7;
+      border: 1px solid #3b5998;
+      color: #fff;
+      padding: 5px 14px;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    .status-update-box button:hover {
+      background: #4a6090;
+    }
+
+    .post-filters {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 6px;
+      padding: 6px 0;
+      margin-bottom: 8px;
+      font-size: 11px;
+    }
+
+    .filter-pill {
+      padding: 3px 10px;
+      border: 1px solid #d8dfea;
+      border-radius: 10px;
+      background: #f7f7f7;
+      color: #3b5998;
+      cursor: pointer;
+      font-size: 11px;
+    }
+
+    .filter-pill:hover {
+      background: #e8e8e8;
+      text-decoration: none;
+    }
+
+    .filter-pill.active {
+      background: #3b5998;
+      border-color: #3b5998;
+      color: #fff;
+    }
+
+    .post-filters .settings-icon {
+      color: #999;
+      font-size: 11px;
+      margin-left: 8px;
+      cursor: pointer;
+    }
+
+    .content-box {
+      border: 1px solid #d8dfea;
+      background: #fff;
+    }
+
+    .content-box-header {
+      background: #f7f7f7;
+      padding: 6px 10px;
+      border-bottom: 1px solid #d8dfea;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .content-box-header h3 {
+      font-size: 11px;
+      font-weight: bold;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .content-box-header h3::before {
+      content: '▼';
+      font-size: 8px;
+      color: #999;
+    }
+
+    .content-box-header .see-all {
+      font-size: 11px;
+    }
+
+    .content-box-content {
+      padding: 10px;
+    }
+
+    .feed-item {
+      padding: 8px 0;
+      border-bottom: 1px solid #e9e9e9;
+      display: flex;
+      gap: 8px;
+    }
+
+    .feed-item:last-child {
+      border-bottom: none;
+    }
+
+    .feed-item-icon {
+      width: 16px;
+      height: 16px;
+      background: #d8dfea;
+      border-radius: 2px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 9px;
+      color: #3b5998;
+    }
+
+    .feed-item-content {
+      flex: 1;
+    }
+
+    .feed-item-content p {
+      margin-bottom: 3px;
+    }
+
+    .feed-item-meta {
+      color: #999;
+      font-size: 10px;
+    }
+
+    .feed-date-header {
+      font-size: 10px;
+      color: #999;
+      padding: 6px 0 4px;
+      border-bottom: 1px solid #e9e9e9;
+      font-weight: bold;
+    }
+
+    .wall-post {
+      padding: 10px 0;
+      border-bottom: 1px solid #e9e9e9;
+      display: flex;
+      gap: 10px;
+    }
+
+    .wall-post:last-child {
+      border-bottom: none;
+    }
+
+    .wall-post-avatar {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #d8dfea 0%, #b8c4d9 100%);
+      border: 1px solid #ccc;
+      flex-shrink: 0;
+    }
+
+    .wall-post-content {
+      flex: 1;
+    }
+
+    .wall-post-header {
+      margin-bottom: 5px;
+    }
+
+    .wall-post-header .author {
+      color: #3b5998;
+      font-weight: bold;
+    }
+
+    .wall-post-header .wrote {
+      color: #999;
+    }
+
+    .wall-post-header .time {
+      color: #999;
+    }
+
+    .wall-post-text {
+      margin-bottom: 5px;
+      line-height: 1.5;
+    }
+
+    .wall-post-actions {
+      font-size: 10px;
+    }
+
+    .wall-post-actions a {
+      color: #3b5998;
+    }
+
+    /* ============================================
+       RIGHT COLUMN
+       ============================================ */
+
+    .right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Currently Consuming */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+    }
+
+    .media-item {
+      text-align: center;
+    }
+
+    .media-item-cover {
+      width: 100%;
+      aspect-ratio: 1;
+      background: linear-gradient(135deg, #6d84b4 0%, #3b5998 100%);
+      border: 1px solid #ccc;
+      margin-bottom: 4px;
+    }
+
+    .media-item-cover.book {
+      background: linear-gradient(135deg, #8b6d4a 0%, #5c4a35 100%);
+    }
+
+    .media-item-cover.podcast {
+      background: linear-gradient(135deg, #6bb46d 0%, #3b7a3d 100%);
+    }
+
+    .media-item-title {
+      font-size: 9px;
+      color: #3b5998;
+      line-height: 1.3;
+    }
+
+    .media-item-artist {
+      font-size: 9px;
+      color: #999;
+    }
+
+    /* Flair Board - Real Image */
+    .flair-image-container {
+      padding: 0;
+    }
+
+    .flair-image-container img {
+      width: 100%;
+      display: block;
+      border-radius: 2px;
+    }
+
+    /* Ad boxes */
+    .ad-box {
+      border: 1px solid #d8dfea;
+      background: #f7f7f7;
+      padding: 10px;
+    }
+
+    .ad-header {
+      font-size: 9px;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+
+    .ad-content {
+      text-align: center;
+    }
+
+    .ad-image {
+      margin-bottom: 8px;
+    }
+
+    /* YouTube 2009 logo */
+    .youtube-logo {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 6px 10px;
+      display: inline-block;
+    }
+
+    .youtube-logo .tube {
+      background: #c4302b;
+      color: #fff;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 12px;
+      display: inline-block;
+    }
+
+    .youtube-logo .you {
+      font-weight: bold;
+      font-size: 12px;
+      color: #000;
+    }
+
+    /* iTunes logo */
+    .itunes-logo {
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(180deg, #b8e3ff 0%, #52a8e8 50%, #1a75cf 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .itunes-logo .note {
+      font-size: 24px;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    }
+
+    /* MySpace logo */
+    .myspace-logo {
+      font-family: Georgia, serif;
+      font-size: 16px;
+      color: #000;
+      font-weight: normal;
+    }
+
+    .myspace-logo span {
+      color: #003399;
+      font-weight: bold;
+    }
+
+    /* AIM logo */
+    .aim-logo {
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(180deg, #ffeb3b 0%, #ffc107 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .aim-logo::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .aim-logo::after {
+      content: '👤';
+      font-size: 16px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* iPod nano */
+    .ipod-logo {
+      width: 25px;
+      height: 50px;
+      background: linear-gradient(180deg, #ff6b9d 0%, #c44569 100%);
+      border-radius: 6px;
+      margin: 0 auto 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .ipod-logo::before {
+      content: '';
+      position: absolute;
+      top: 6px;
+      left: 4px;
+      right: 4px;
+      height: 20px;
+      background: #222;
+      border-radius: 2px;
+    }
+
+    .ipod-logo::after {
+      content: '';
+      position: absolute;
+      bottom: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 14px;
+      background: #ddd;
+      border-radius: 50%;
+    }
+
+    /* Netflix */
+    .netflix-logo {
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      color: #e50914;
+      letter-spacing: -0.5px;
+    }
+
+    /* Firefox */
+    .firefox-logo {
+      width: 45px;
+      height: 45px;
+      background: linear-gradient(135deg, #ff9500 0%, #ff6600 50%, #e66000 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .firefox-logo::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(135deg, #0060df 0%, #0045a5 100%);
+      border-radius: 50%;
+    }
+
+    .ad-text {
+      font-size: 10px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .ad-text a {
+      color: #3b5998;
+    }
+
+    .ad-text strong {
+      color: #333;
+    }
+
+    /* ============================================
+       FOOTER BAR
+       ============================================ */
+
+    .footer-bar {
+      background: linear-gradient(180deg, #f5f5f5 0%, #e5e5e5 100%);
+      border-top: 1px solid #ccc;
+      padding: 4px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-online {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      color: #333;
+      background: linear-gradient(180deg, #fafafa 0%, #e8e8e8 100%);
+      border: 1px solid #999;
+      border-radius: 3px;
+      padding: 4px 8px;
+    }
+
+    .footer-online .online-dot {
+      width: 8px;
+      height: 8px;
+      background: #6BBA70;
+      border-radius: 50%;
+    }
+
+    .footer-chat {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      background: linear-gradient(180deg, #5c79b4 0%, #3b5998 100%);
+      border: 1px solid #2d4373;
+      border-radius: 3px;
+      padding: 4px 8px;
+      color: #fff;
+      font-size: 11px;
+      cursor: pointer;
+    }
+
+    .footer-chat:hover {
+      background: linear-gradient(180deg, #6d89c4 0%, #4a69a8 100%);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Bar -->
+  <div class="header">
+    <div class="header-logo">lindsay kadowaki</div>
+    <div class="header-nav">
+      <a href="#" class="active">Profile</a>
+      <a href="#">Interests</a>
+      <a href="#">Info</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="header-right">
+      <a href="#">Settings</a>
+      <a href="#">Logout</a>
+      <div class="header-search">
+        <input type="text" placeholder="Search">
+      </div>
+    </div>
+  </div>
+
+  <!-- Blue Profile Bar -->
+  <div class="profile-bar"></div>
+
+  <!-- Main Content Area -->
+  <div class="page-container">
+
+    <!-- Left Column -->
+    <div class="left-col">
+      <div class="profile-photo">
+        <img src="profile-photo-v2.jpg" alt="Lindsay Kadowaki">
+      </div>
+
+      <div class="profile-actions">
+        <a href="#">View My Resume</a>
+        <a href="#">Connect on LinkedIn</a>
+        <a href="#">Follow on Substack</a>
+        <a href="#">Follow on X</a>
+        <a href="#">Send Lindsay a Message</a>
+        <a href="#">View Message History</a>
+        <a href="#" class="poke">Poke Her!</a>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-box-header">
+          <h3>Status</h3>
+        </div>
+        <div class="sidebar-box-content">
+          <div class="status-indicator">
+            <span class="status-dot"></span>
+            <span>Lindsay is online now.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-box">
+        <div class="sidebar-box-header">
+          <h3>Basic Info</h3>
+          <a href="#" class="edit-link">[ edit ]</a>
+        </div>
+        <div class="sidebar-box-content">
+          <div class="info-list">
+            <div class="info-list-item">
+              <span class="label">Location:</span>
+              <span>San Francisco, CA</span>
+            </div>
+            <div class="info-list-item">
+              <span class="label">Work:</span>
+              <a href="#">Anthropic</a>
+            </div>
+            <div class="info-list-item">
+              <span class="label">Birthday:</span>
+              <span>January 1</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Middle Column -->
+    <div class="main-col">
+
+      <!-- Profile name and tagline -->
+      <div class="profile-intro">
+        <h2>Lindsay</h2>
+        <span class="tagline">is building something.</span>
+        <a href="#" class="clear-link">clear</a>
+      </div>
+
+      <!-- Tabs -->
+      <div class="profile-tabs">
+        <a href="#" class="active">Wall</a>
+        <a href="#">Info</a>
+        <a href="#">Photos</a>
+        <a href="#">Boxes</a>
+        <a href="#">+</a>
+      </div>
+
+      <!-- Action Bar -->
+      <div class="action-bar">
+        <a href="#">
+          <span class="action-icon">👤</span>
+          Update Status
+        </a>
+        <a href="#">
+          <span class="action-icon">🔗</span>
+          Share Link
+        </a>
+        <a href="#">
+          <span class="action-icon">📷</span>
+          Add Photos
+        </a>
+        <a href="#">
+          <span class="action-icon">🎬</span>
+          Add Video
+        </a>
+        <a href="#">
+          <span class="action-icon">📝</span>
+          Write Note
+        </a>
+      </div>
+
+      <!-- Status Update Box -->
+      <div class="status-update-box">
+        <input type="text" placeholder="Write something...">
+        <button>Post</button>
+      </div>
+
+      <!-- Post Filters -->
+      <div class="post-filters">
+        <a href="#" class="filter-pill active">All Posts</a>
+        <a href="#" class="filter-pill">Posts by Lindsay</a>
+        <a href="#" class="filter-pill">Posts by Others</a>
+        <span class="settings-icon">⚙ Settings</span>
+      </div>
+
+      <!-- Mini-Feed -->
+      <div class="content-box">
+        <div class="content-box-header">
+          <h3>Mini-Feed</h3>
+          <a href="#" class="see-all">See All</a>
+        </div>
+        <div class="content-box-content">
+          <div class="feed-date-header">Today</div>
+
+          <div class="feed-item">
+            <div class="feed-item-icon">📖</div>
+            <div class="feed-item-content">
+              <p>Lindsay is now reading <a href="#">The Design of Everyday Things</a>.</p>
+              <div class="feed-item-meta">2 hours ago · Comment</div>
+            </div>
+          </div>
+
+          <div class="feed-item">
+            <div class="feed-item-icon">🎵</div>
+            <div class="feed-item-content">
+              <p>Lindsay added <a href="#">Blonde</a> by Frank Ocean to favorites.</p>
+              <div class="feed-item-meta">5 hours ago · Comment</div>
+            </div>
+          </div>
+
+          <div class="feed-date-header">Yesterday</div>
+
+          <div class="feed-item">
+            <div class="feed-item-icon">💼</div>
+            <div class="feed-item-content">
+              <p>Lindsay updated her <a href="#">resume</a>.</p>
+              <div class="feed-item-meta">Yesterday at 3:45pm · Comment</div>
+            </div>
+          </div>
+
+          <div class="feed-item">
+            <div class="feed-item-icon">👥</div>
+            <div class="feed-item-content">
+              <p><a href="#">Lindsay</a> and <a href="#">Sarah</a> are now friends.</p>
+              <div class="feed-item-meta">Yesterday at 2:30pm</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- The Wall -->
+      <div class="content-box" style="margin-top: 10px;">
+        <div class="content-box-content">
+
+          <div class="wall-post">
+            <div class="wall-post-avatar"></div>
+            <div class="wall-post-content">
+              <div class="wall-post-header">
+                <a href="#" class="author">Ben</a>
+                <span class="wrote"> wrote </span>
+                <span class="time">at 12:41pm</span>
+              </div>
+              <div class="wall-post-text">
+                Hell ya, I should be posting them today.
+              </div>
+              <div class="wall-post-actions">
+                <a href="#">Wall-to-Wall</a> - <a href="#">Write on Ben's Wall</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="wall-post">
+            <div class="wall-post-avatar"></div>
+            <div class="wall-post-content">
+              <div class="wall-post-header">
+                <a href="#" class="author">Dave</a>
+                <span class="wrote"> wrote </span>
+                <span class="time">at 12:41am</span>
+              </div>
+              <div class="wall-post-text">
+                You back at school?
+              </div>
+              <div class="wall-post-actions">
+                <a href="#">Wall-to-Wall</a> - <a href="#">Write on Dave's Wall</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="wall-post">
+            <div class="wall-post-avatar"></div>
+            <div class="wall-post-content">
+              <div class="wall-post-header">
+                <a href="#" class="author">Michelle</a>
+                <span class="wrote"> wrote </span>
+                <span class="time">at 12:15pm</span>
+              </div>
+              <div class="wall-post-text">
+                yes i deffff am!!! It's weird, but i definitely approve.<br><br>
+                miss you!
+              </div>
+              <div class="wall-post-actions">
+                <a href="#">Wall-to-Wall</a> - <a href="#">Write on Michelle's Wall</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-col">
+
+      <!-- Currently Consuming -->
+      <div class="sidebar-box">
+        <div class="sidebar-box-header">
+          <h3>Currently</h3>
+        </div>
+        <div class="sidebar-box-content">
+          <div class="media-grid">
+            <div class="media-item">
+              <div class="media-item-cover"></div>
+              <div class="media-item-title">Album</div>
+              <div class="media-item-artist">Artist</div>
+            </div>
+            <div class="media-item">
+              <div class="media-item-cover book"></div>
+              <div class="media-item-title">Book</div>
+              <div class="media-item-artist">Author</div>
+            </div>
+            <div class="media-item">
+              <div class="media-item-cover podcast"></div>
+              <div class="media-item-title">Podcast</div>
+              <div class="media-item-artist">Host</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Flair Board - Real Image -->
+      <div class="sidebar-box">
+        <div class="sidebar-box-header">
+          <h3>Flair</h3>
+          <a href="#" class="edit-link">See All</a>
+        </div>
+        <div class="sidebar-box-content flair-image-container">
+          <img src="flair-board.png" alt="Pieces of Flair">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Footer Bar -->
+  <div class="footer-bar">
+    <div class="footer-right">
+      <div class="footer-online">
+        <span class="online-dot"></span>
+        Online Friends (16)
+      </div>
+      <div class="footer-chat">Chat</div>
+    </div>
+  </div>
+
+</body>
+</html>

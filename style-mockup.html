@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LK Homepage - Style Mockup</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lucida+Grande&display=swap" rel="stylesheet">
+  <style>
+    /* ============================================
+       LK HOMEPAGE - VISUAL STYLE MOCKUP
+       "Something you can feel"
+
+       Open this file in a browser to experience
+       the design direction. Hover over elements!
+       ============================================ */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Lucida Grande', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      min-height: 100vh;
+      /* Linen texture background - classic iOS/Mac feel */
+      background-color: #e8e4df;
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 2px,
+          rgba(0,0,0,0.03) 2px,
+          rgba(0,0,0,0.03) 4px
+        ),
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 2px,
+          rgba(0,0,0,0.02) 2px,
+          rgba(0,0,0,0.02) 4px
+        );
+      color: #333;
+      padding: 40px;
+    }
+
+    /* ============================================
+       SECTION: Header Bar (iTunes/Facebook style)
+       ============================================ */
+
+    .header-bar {
+      background: linear-gradient(180deg,
+        #6d84a2 0%,
+        #4a6180 50%,
+        #3a5170 51%,
+        #4a6180 100%
+      );
+      border-radius: 8px;
+      padding: 16px 24px;
+      margin-bottom: 40px;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.15) inset,
+        0 4px 12px rgba(0,0,0,0.3),
+        0 1px 3px rgba(0,0,0,0.2);
+      border: 1px solid #2a4160;
+    }
+
+    .header-bar h1 {
+      color: #fff;
+      font-size: 22px;
+      font-weight: normal;
+      text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+      letter-spacing: 0.5px;
+    }
+
+    .header-bar .subtitle {
+      color: rgba(255,255,255,0.7);
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    /* ============================================
+       SECTION: The Glossy Aqua Buttons
+       ============================================ */
+
+    .section {
+      background: linear-gradient(180deg, #fff 0%, #f5f5f5 100%);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow:
+        0 1px 0 #fff inset,
+        0 4px 12px rgba(0,0,0,0.1),
+        0 1px 3px rgba(0,0,0,0.08);
+      border: 1px solid #c8c8c8;
+    }
+
+    .section-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #888;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .button-row {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    /* Classic Aqua Button */
+    .btn-aqua {
+      background: linear-gradient(180deg,
+        #7db5e0 0%,
+        #5a9fd4 50%,
+        #3d8ac7 51%,
+        #4a9cd4 100%
+      );
+      border: 1px solid #2970a8;
+      border-radius: 6px;
+      padding: 10px 24px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: bold;
+      text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+      cursor: pointer;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.3) inset,
+        0 2px 4px rgba(0,0,0,0.2);
+      transition: all 0.15s ease;
+    }
+
+    .btn-aqua:hover {
+      background: linear-gradient(180deg,
+        #8ec4eb 0%,
+        #6aaee0 50%,
+        #4d9ad4 51%,
+        #5aace0 100%
+      );
+    }
+
+    .btn-aqua:active {
+      background: linear-gradient(180deg,
+        #3d8ac7 0%,
+        #4a9cd4 50%,
+        #5a9fd4 51%,
+        #7db5e0 100%
+      );
+      box-shadow:
+        0 1px 3px rgba(0,0,0,0.3) inset;
+    }
+
+    /* Green Action Button */
+    .btn-green {
+      background: linear-gradient(180deg,
+        #9fd484 0%,
+        #6fbf4a 50%,
+        #5cb038 51%,
+        #6fbf4a 100%
+      );
+      border: 1px solid #4a9030;
+      border-radius: 6px;
+      padding: 10px 24px;
+      color: #fff;
+      font-size: 13px;
+      font-weight: bold;
+      text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+      cursor: pointer;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.35) inset,
+        0 2px 4px rgba(0,0,0,0.2);
+      transition: all 0.15s ease;
+    }
+
+    .btn-green:hover {
+      background: linear-gradient(180deg,
+        #b0e095 0%,
+        #80d05b 50%,
+        #6dc049 51%,
+        #80d05b 100%
+      );
+    }
+
+    /* Subtle Gray Button */
+    .btn-gray {
+      background: linear-gradient(180deg,
+        #fafafa 0%,
+        #e8e8e8 50%,
+        #d8d8d8 51%,
+        #e8e8e8 100%
+      );
+      border: 1px solid #a0a0a0;
+      border-radius: 6px;
+      padding: 10px 24px;
+      color: #333;
+      font-size: 13px;
+      cursor: pointer;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.8) inset,
+        0 2px 4px rgba(0,0,0,0.1);
+      transition: all 0.15s ease;
+    }
+
+    .btn-gray:hover {
+      background: linear-gradient(180deg,
+        #fff 0%,
+        #f0f0f0 50%,
+        #e0e0e0 51%,
+        #f0f0f0 100%
+      );
+    }
+
+    /* ============================================
+       SECTION: Media Cards (Cover Flow inspired)
+       ============================================ */
+
+    .media-shelf {
+      display: flex;
+      gap: 24px;
+      padding: 20px 0;
+      justify-content: center;
+    }
+
+    .media-card {
+      width: 140px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .media-card:hover {
+      transform: scale(1.08) translateY(-8px);
+    }
+
+    .media-cover {
+      width: 140px;
+      height: 140px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 4px;
+      box-shadow:
+        0 8px 20px rgba(0,0,0,0.3),
+        0 2px 6px rgba(0,0,0,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .media-cover::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50%;
+      background: linear-gradient(180deg,
+        rgba(255,255,255,0.2) 0%,
+        transparent 100%
+      );
+      border-radius: 4px 4px 0 0;
+    }
+
+    .media-cover.book {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+
+    .media-cover.podcast {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+    /* Reflection effect */
+    .media-reflection {
+      width: 140px;
+      height: 60px;
+      margin-top: 4px;
+      background: linear-gradient(180deg,
+        rgba(102, 126, 234, 0.3) 0%,
+        transparent 100%
+      );
+      border-radius: 0 0 4px 4px;
+      transform: scaleY(-1);
+      opacity: 0.4;
+      mask-image: linear-gradient(180deg, black 0%, transparent 100%);
+      -webkit-mask-image: linear-gradient(180deg, black 0%, transparent 100%);
+    }
+
+    .media-reflection.book {
+      background: linear-gradient(180deg,
+        rgba(240, 147, 251, 0.3) 0%,
+        transparent 100%
+      );
+    }
+
+    .media-reflection.podcast {
+      background: linear-gradient(180deg,
+        rgba(79, 172, 254, 0.3) 0%,
+        transparent 100%
+      );
+    }
+
+    .media-label {
+      text-align: center;
+      margin-top: 8px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    /* ============================================
+       SECTION: Brushed Metal Panel
+       ============================================ */
+
+    .metal-panel {
+      background: linear-gradient(180deg,
+        #d4d4d4 0%,
+        #c8c8c8 20%,
+        #b8b8b8 40%,
+        #c4c4c4 60%,
+        #d0d0d0 80%,
+        #c8c8c8 100%
+      );
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 30px;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.5) inset,
+        0 -1px 0 rgba(0,0,0,0.1) inset,
+        0 4px 12px rgba(0,0,0,0.15);
+      border: 1px solid #999;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Brushed metal texture */
+    .metal-panel::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 1px,
+        rgba(255,255,255,0.03) 1px,
+        rgba(255,255,255,0.03) 2px
+      );
+      pointer-events: none;
+    }
+
+    .metal-panel h3 {
+      color: #444;
+      font-size: 14px;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.6);
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    /* ============================================
+       SECTION: Form Input (Old-school style)
+       ============================================ */
+
+    .form-group {
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .form-input {
+      width: 100%;
+      max-width: 400px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-family: inherit;
+      border: 1px solid #888;
+      border-radius: 6px;
+      background: linear-gradient(180deg, #f0f0f0 0%, #fff 8%);
+      box-shadow:
+        0 1px 3px rgba(0,0,0,0.15) inset,
+        0 1px 0 rgba(255,255,255,0.8);
+      transition: all 0.2s ease;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #5a9fd4;
+      box-shadow:
+        0 1px 3px rgba(0,0,0,0.15) inset,
+        0 0 0 3px rgba(90, 159, 212, 0.3);
+    }
+
+    .form-input::placeholder {
+      color: #999;
+    }
+
+    /* ============================================
+       SECTION: Contact "Note" Card
+       ============================================ */
+
+    .note-card {
+      background: linear-gradient(180deg, #fffef5 0%, #f8f5e8 100%);
+      border-radius: 4px;
+      padding: 30px;
+      max-width: 360px;
+      box-shadow:
+        0 2px 8px rgba(0,0,0,0.15),
+        0 8px 24px rgba(0,0,0,0.1);
+      border: 1px solid #d4c89a;
+      position: relative;
+      transform: rotate(-1deg);
+      margin: 20px auto;
+    }
+
+    .note-card::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 24px;
+      background: linear-gradient(180deg, #d4a574 0%, #c49464 100%);
+      border-radius: 2px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .note-card h4 {
+      font-size: 16px;
+      color: #5a4a3a;
+      margin-bottom: 16px;
+      font-weight: normal;
+      font-style: italic;
+    }
+
+    .note-textarea {
+      width: 100%;
+      height: 100px;
+      padding: 12px;
+      font-size: 14px;
+      font-family: 'Georgia', serif;
+      border: none;
+      background: transparent;
+      resize: none;
+      color: #3a3a3a;
+      line-height: 1.6;
+    }
+
+    .note-textarea:focus {
+      outline: none;
+    }
+
+    .note-textarea::placeholder {
+      color: #a0a0a0;
+      font-style: italic;
+    }
+
+    .note-send {
+      background: linear-gradient(180deg,
+        #e8a87c 0%,
+        #d4824a 50%,
+        #c47238 51%,
+        #d4824a 100%
+      );
+      border: 1px solid #a05a28;
+      border-radius: 4px;
+      padding: 8px 20px;
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      text-shadow: 0 -1px 1px rgba(0,0,0,0.3);
+      cursor: pointer;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.3) inset,
+        0 2px 4px rgba(0,0,0,0.2);
+      transition: all 0.15s ease;
+      float: right;
+    }
+
+    .note-send:hover {
+      background: linear-gradient(180deg,
+        #f0b88c 0%,
+        #e4925a 50%,
+        #d48248 51%,
+        #e4925a 100%
+      );
+    }
+
+    /* ============================================
+       SECTION: Sidebar Widget (Facebook-era)
+       ============================================ */
+
+    .widget {
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      overflow: hidden;
+      max-width: 280px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .widget-header {
+      background: linear-gradient(180deg, #f6f6f6 0%, #e8e8e8 100%);
+      padding: 10px 14px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .widget-header h4 {
+      font-size: 12px;
+      font-weight: bold;
+      color: #3b5998;
+    }
+
+    .widget-content {
+      padding: 14px;
+    }
+
+    .widget-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .widget-item:last-child {
+      border-bottom: none;
+    }
+
+    .widget-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .widget-text {
+      font-size: 12px;
+      color: #333;
+      line-height: 1.4;
+    }
+
+    .widget-text strong {
+      color: #3b5998;
+    }
+
+    /* ============================================
+       SECTION: Color Palette Display
+       ============================================ */
+
+    .palette {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .color-swatch {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      box-shadow:
+        0 2px 8px rgba(0,0,0,0.2),
+        0 1px 0 rgba(255,255,255,0.5) inset;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-bottom: 8px;
+      font-size: 10px;
+      color: #fff;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+      font-weight: bold;
+    }
+
+    .swatch-blue { background: linear-gradient(180deg, #6d84a2 0%, #3b5998 100%); }
+    .swatch-aqua { background: linear-gradient(180deg, #7db5e0 0%, #3d8ac7 100%); }
+    .swatch-green { background: linear-gradient(180deg, #9fd484 0%, #5cb038 100%); }
+    .swatch-orange { background: linear-gradient(180deg, #e8a87c 0%, #c47238 100%); }
+    .swatch-gray { background: linear-gradient(180deg, #d4d4d4 0%, #a0a0a0 100%); color: #444; text-shadow: 0 1px 0 rgba(255,255,255,0.5); }
+
+    /* ============================================
+       LAYOUT HELPERS
+       ============================================ */
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .two-column {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .label {
+      display: inline-block;
+      background: #eee;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 10px;
+      color: #666;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+
+    .footer {
+      text-align: center;
+      padding: 40px 0 20px;
+      color: #888;
+      font-size: 12px;
+    }
+
+    .footer em {
+      color: #666;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Bar -->
+  <div class="header-bar">
+    <h1>LK Homepage</h1>
+    <div class="subtitle">Visual Style Mockup - Hover over elements to feel the interactions</div>
+  </div>
+
+  <!-- Buttons Section -->
+  <div class="section">
+    <div class="section-title">Glossy Aqua Buttons</div>
+    <div class="button-row">
+      <button class="btn-aqua">Say Hello</button>
+      <button class="btn-green">View LinkedIn</button>
+      <button class="btn-gray">Download Resume</button>
+    </div>
+  </div>
+
+  <!-- Two Column Layout -->
+  <div class="two-column">
+
+    <!-- Media Shelf -->
+    <div class="section">
+      <div class="section-title">Currently Listening / Reading</div>
+      <div class="media-shelf">
+        <div class="media-card">
+          <div class="media-cover"></div>
+          <div class="media-reflection"></div>
+          <div class="media-label">Album Title</div>
+        </div>
+        <div class="media-card">
+          <div class="media-cover book"></div>
+          <div class="media-reflection book"></div>
+          <div class="media-label">Book Title</div>
+        </div>
+        <div class="media-card">
+          <div class="media-cover podcast"></div>
+          <div class="media-reflection podcast"></div>
+          <div class="media-label">Podcast</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Widget -->
+    <div class="section">
+      <div class="section-title">Sidebar Widget (Facebook-era feel)</div>
+      <div class="widget">
+        <div class="widget-header">
+          <h4>Recent Updates</h4>
+        </div>
+        <div class="widget-content">
+          <div class="widget-item">
+            <div class="widget-avatar"></div>
+            <div class="widget-text"><strong>New post:</strong> Thoughts on design systems</div>
+          </div>
+          <div class="widget-item">
+            <div class="widget-avatar"></div>
+            <div class="widget-text"><strong>Currently:</strong> Reading "The Design of Everyday Things"</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Brushed Metal Panel -->
+  <div class="metal-panel">
+    <h3>Brushed Metal Panel (iTunes / Mac OS X style)</h3>
+    <div class="button-row">
+      <button class="btn-gray">Previous</button>
+      <button class="btn-aqua">Play</button>
+      <button class="btn-gray">Next</button>
+    </div>
+  </div>
+
+  <!-- Two Column Layout -->
+  <div class="two-column">
+
+    <!-- Form Inputs -->
+    <div class="section">
+      <div class="section-title">Form Elements</div>
+      <div class="form-group">
+        <input type="text" class="form-input" placeholder="Your name (optional)">
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-input" placeholder="your@email.com">
+      </div>
+    </div>
+
+    <!-- Color Palette -->
+    <div class="section">
+      <div class="section-title">Color Palette</div>
+      <div class="palette">
+        <div class="color-swatch swatch-blue">Blue</div>
+        <div class="color-swatch swatch-aqua">Aqua</div>
+        <div class="color-swatch swatch-green">Green</div>
+        <div class="color-swatch swatch-orange">Warm</div>
+        <div class="color-swatch swatch-gray">Metal</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Contact Note Card -->
+  <div class="section">
+    <div class="section-title">Contact "Note" Concept</div>
+    <div class="note-card">
+      <h4>Drop me a note...</h4>
+      <textarea class="note-textarea" placeholder="What's on your mind?"></textarea>
+      <button class="note-send">Send</button>
+      <div style="clear:both"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <em>"Something you can feel."</em><br><br>
+    Open this file in your browser and hover over elements to experience the interactions.
+  </div>
+
+</body>
+</html>
